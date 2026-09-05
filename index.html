@@ -298,6 +298,55 @@
             margin-top: 6px;
         }
 
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 22px 0 20px;
+        }
+
+        .plan-card {
+            border-radius: 22px;
+            padding: 20px;
+            background: white;
+            border: 1px solid var(--line);
+            box-shadow: 0 12px 28px rgba(31, 41, 46, 0.07);
+        }
+
+        .plan-card.featured {
+            border: 1px solid rgba(63, 124, 255, 0.35);
+            background: linear-gradient(180deg, rgba(63, 124, 255, 0.06), white 60%);
+        }
+
+        .plan-card .badge {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent);
+            background: var(--accent-soft);
+            border-radius: 999px;
+            padding: 4px 10px;
+            margin-bottom: 10px;
+        }
+
+        .plan-card strong {
+            display: block;
+            font-size: 19px;
+            margin-bottom: 4px;
+        }
+
+        .plan-card .price {
+            color: var(--text);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .plan-card p {
+            margin: 0;
+            font-size: 14px;
+        }
+
         ul {
             padding-left: 20px;
         }
@@ -318,7 +367,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .contact-grid {
+            .contact-grid,
+            .plan-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -340,6 +390,7 @@
             </a>
             <nav class="nav">
                 <a href="#support">Support</a>
+                <a href="#subscription">Sync</a>
                 <a href="#privacy">Privacy</a>
             </nav>
         </header>
@@ -350,6 +401,7 @@
                 <p>
                     UniCalendar helps students import their Neptun timetable, organize A/B weeks,
                     and follow the current class with widgets and Live Activities on iPhone and iPad.
+                    Available in 10 languages, with optional iCloud sync across all your devices.
                 </p>
                 <div class="cta-row">
                     <a class="cta primary" href="#support">Get Support</a>
@@ -414,6 +466,30 @@
                     your Home Screen and Lock Screen.
                 </p>
             </article>
+
+            <article class="panel">
+                <h2>Archive past timetables</h2>
+                <p>
+                    Archive a completed timetable to keep your current schedule clean, and restore
+                    or delete archived classes whenever you need them.
+                </p>
+            </article>
+
+            <article class="panel">
+                <h2>iCloud Sync (optional)</h2>
+                <p>
+                    Keep your timetable, colors, and settings in sync across your iPhone and iPad
+                    using your own private iCloud account.
+                </p>
+            </article>
+
+            <article class="panel">
+                <h2>10 languages</h2>
+                <p>
+                    UniCalendar is available in Hungarian, English, German, French, Spanish, Italian,
+                    Polish, Czech, Slovak, and Romanian.
+                </p>
+            </article>
         </section>
 
         <section class="section-card" id="support">
@@ -426,11 +502,6 @@
             </div>
 
             <div class="contact-grid">
-                <a class="contact-card" href="https://discord.gg/MSbAxN2Uw7">
-                    <strong>Discord Community</strong>
-                    <span>Join the UniCalendar Discord server for quick feedback, bug reports, and feature ideas.</span>
-                </a>
-
                 <a class="contact-card" href="mailto:smate5448@gmail.com?subject=UniCalendar%20Support">
                     <strong>Email Support</strong>
                     <span>Send an email if you want to report a bug, ask a question, or request a feature.</span>
@@ -460,15 +531,64 @@
 
             <h2>Contact</h2>
             <p>
-                Discord: <a href="https://discord.gg/MSbAxN2Uw7">discord.gg/MSbAxN2Uw7</a><br>
                 Email: <a href="mailto:smate5448@gmail.com">smate5448@gmail.com</a>
+            </p>
+        </section>
+
+        <section class="section-card" id="subscription">
+            <div class="section-header">
+                <h2>Sync Subscription</h2>
+                <p>
+                    UniCalendar works fully offline with local, on-device storage at no cost.
+                    Sync is an optional, auto-renewable subscription that keeps your timetable, colors,
+                    and settings up to date across all of your own devices using your private iCloud
+                    account.
+                </p>
+            </div>
+
+            <div class="plan-grid">
+                <div class="plan-card">
+                    <strong>Monthly</strong>
+                    <span class="price">$2.00 / month</span>
+                    <p>Billed monthly. Cancel anytime.</p>
+                </div>
+
+                <div class="plan-card featured">
+                    <span class="badge">Better value</span>
+                    <strong>Yearly</strong>
+                    <span class="price">$20.00 / year</span>
+                    <p>Billed once a year. Cancel anytime.</p>
+                </div>
+            </div>
+
+            <h2>Terms</h2>
+            <ul>
+                <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+                <li>Subscriptions automatically renew unless auto-renew is turned off at least
+                    24 hours before the end of the current period.</li>
+                <li>Your account will be charged for renewal within 24 hours prior to the end of
+                    the current period, at the price of the selected plan.</li>
+                <li>You can manage or cancel your subscription at any time in
+                    Settings &gt; [your name] &gt; Subscriptions on your device, or via the
+                    "Manage Subscription" option inside the app.</li>
+                <li>Prices are shown in USD and may vary by region; the exact price for your
+                    country is shown in the app and on the App Store before you subscribe.</li>
+                <li>Turning sync off on a device, or canceling the subscription, does not delete
+                    your timetable - your data remains available locally on your device.</li>
+            </ul>
+
+            <p>
+                See the <a href="#privacy">Privacy Policy</a> below for details on how synced data is
+                stored, and Apple's
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard
+                End User License Agreement</a> for the full terms of use that apply to UniCalendar.
             </p>
         </section>
 
         <section class="section-card" id="privacy">
             <div class="section-header">
                 <h2>Privacy Policy</h2>
-                <div class="meta">Last updated: April 2026</div>
+                <div class="meta">Last updated: September 2026</div>
             </div>
 
             <p>
@@ -479,48 +599,70 @@
             <h2>1. Data Storage</h2>
             <p>
                 UniCalendar stores timetable-related data locally on your device. This includes imported timetable
-                files, manual class entries, settings, widget data, and A/B week configuration.
+                files, manual class entries, archived timetables, settings, widget data, and A/B week configuration.
             </p>
 
-            <h2>2. Account Registration</h2>
+            <h2>2. Optional iCloud Sync</h2>
             <p>
-                UniCalendar does not require account creation, login, or profile registration.
+                If you choose to subscribe to Sync, your timetable, archived classes, and preferences are also
+                stored in your own private iCloud account, using Apple's CloudKit private database. This data is
+                only accessible to you, in your own iCloud account - the developer does not have access to it and
+                cannot view, download, or export it. Sync can be turned on or off independently on each of your
+                devices, and turning it off does not delete your data; it simply stops sending updates to iCloud
+                from that device.
             </p>
 
-            <h2>3. Remote Services</h2>
+            <h2>3. Account Registration</h2>
             <p>
-                UniCalendar does not require a remote backend for its core timetable features. The app is intended
-                to work locally on your device.
+                UniCalendar does not require account creation, login, or profile registration. Optional Sync uses
+                your existing Apple ID / iCloud account, managed entirely by Apple.
             </p>
 
-            <h2>4. Data Collection</h2>
+            <h2>4. Remote Services</h2>
+            <p>
+                UniCalendar does not operate its own remote backend or server. Core timetable features work fully
+                offline. The optional Sync feature uses Apple's iCloud (CloudKit) infrastructure directly; no data
+                passes through or is stored on any server operated by the developer.
+            </p>
+
+            <h2>5. Data Collection</h2>
             <p>
                 UniCalendar does not sell your personal data. The app is not designed to collect personal timetable
                 data for advertising or third-party profiling purposes.
             </p>
 
-            <h2>5. Support Contact</h2>
+            <h2>6. Subscriptions and Payment</h2>
             <p>
-                If you contact us by email or through Discord, we may receive the information you choose to include
+                Sync is offered as an auto-renewable subscription (monthly or yearly) through the App Store.
+                All payment processing is handled entirely by Apple; UniCalendar and its developer never receive
+                or store your payment card details. See the <a href="#subscription">Sync Subscription</a> section
+                above for full pricing and renewal terms.
+            </p>
+
+            <h2>7. Support Contact</h2>
+            <p>
+                If you contact us by email, we may receive the information you choose to include
                 in your message, such as your email address, device details, screenshots, or bug descriptions.
             </p>
 
-            <h2>6. Third-Party Services</h2>
+            <h2>8. Third-Party Services</h2>
             <p>
-                If you choose to use external links such as email or Discord, those services operate under their own
-                privacy terms and policies.
+                If you choose to use an external link such as email, that service operates under its own
+                privacy terms and policies. Optional Sync relies on Apple's iCloud and CloudKit services, which
+                operate under Apple's own privacy policy.
             </p>
 
-            <h2>7. Your Control</h2>
+            <h2>9. Your Control</h2>
             <p>
                 Because UniCalendar primarily stores timetable data locally, you can remove most stored app data by
-                deleting timetable entries in the app or uninstalling the application from your device.
+                deleting timetable entries in the app or uninstalling the application from your device. If you have
+                used Sync, you can also delete your synced data by turning off Sync on all your devices and removing
+                the UniCalendar data from your iCloud account via your device's iCloud storage settings.
             </p>
 
-            <h2>8. Contact</h2>
+            <h2>10. Contact</h2>
             <ul>
                 <li>Email: <a href="mailto:smate5448@gmail.com">smate5448@gmail.com</a></li>
-                <li>Discord: <a href="https://discord.gg/MSbAxN2Uw7">discord.gg/MSbAxN2Uw7</a></li>
             </ul>
         </section>
 
